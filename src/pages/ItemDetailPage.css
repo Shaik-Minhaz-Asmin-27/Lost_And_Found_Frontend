@@ -1,0 +1,251 @@
+.item-detail { padding: 32px 24px 80px; }
+
+.item-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  font-size: 13px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-bottom: 28px;
+  transition: all var(--transition);
+}
+.item-detail__back:hover { color: var(--text-1); border-color: var(--border-2); }
+
+.item-detail__layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .item-detail__layout { grid-template-columns: 1fr; }
+}
+
+/* Image Column */
+.item-detail__image-col { display: flex; flex-direction: column; gap: 20px; }
+
+.item-detail__image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4/3;
+  background: var(--bg-3);
+}
+.item-detail__image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.item-detail__image-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--border-2);
+}
+
+.item-detail__contact {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+.item-detail__contact-title {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  margin-bottom: 14px;
+}
+.item-detail__contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+.item-detail__contact-row a { color: var(--accent); }
+.item-detail__contact-row a:hover { text-decoration: underline; }
+
+/* Info Column */
+.item-detail__info-col { display: flex; flex-direction: column; }
+
+.item-detail__badges { display: flex; gap: 8px; margin-bottom: 14px; }
+
+.item-detail__category {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--font-display);
+  margin-bottom: 8px;
+}
+
+.item-detail__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.item-detail__desc {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  white-space: pre-wrap;
+}
+
+.item-detail__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.item-detail__meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.item-detail__meta-row svg { color: var(--text-3); flex-shrink: 0; }
+.item-detail__meta-row strong { color: var(--text-1); }
+
+.item-detail__divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0 24px;
+}
+
+/* Actions */
+.item-detail__actions { display: flex; flex-direction: column; gap: 14px; }
+
+.item-detail__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.item-detail__btn--claim {
+  background: var(--accent);
+  color: #fff;
+  width: fit-content;
+}
+.item-detail__btn--claim:hover:not(:disabled) {
+  background: #ea6c0a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+.item-detail__btn--claim:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.item-detail__claimed-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--claimed-bg);
+  border: 1px solid var(--claimed);
+  border-radius: var(--radius-sm);
+  color: var(--claimed);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  width: fit-content;
+}
+
+.item-detail__owner-actions { display: flex; flex-direction: column; gap: 14px; }
+
+.item-detail__status-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.item-detail__status-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-3);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 4px;
+}
+.item-detail__status-btn {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+}
+.item-detail__status-btn:hover:not(:disabled):not(.active) {
+  border-color: var(--border-2);
+  color: var(--text-1);
+}
+.item-detail__status-btn.active {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.item-detail__status-btn:disabled { cursor: not-allowed; opacity: 0.5; }
+
+.item-detail__edit-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.item-detail__btn--edit {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+}
+.item-detail__btn--edit:hover {
+  border-color: var(--border-2);
+  color: var(--text-1);
+}
+.item-detail__btn--delete {
+  background: rgba(239,68,68,.1);
+  border: 1px solid rgba(239,68,68,.3);
+  color: #f87171;
+}
+.item-detail__btn--delete:hover:not(:disabled) {
+  background: rgba(239,68,68,.18);
+}
+.item-detail__btn--delete:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Skeleton */
+.item-detail__skeleton {
+  height: 500px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-2) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}

@@ -1,0 +1,57 @@
+.form-page {
+  padding: 48px 24px 80px;
+  max-width: 700px;
+}
+
+.form-page__header { margin-bottom: 36px; }
+
+.form-page__label {
+  display: inline-block;
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  margin-bottom: 16px;
+}
+
+.form-page__title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-1);
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.form-page__sub {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+.form-page__card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.form-page__skeleton {
+  height: 600px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, var(--bg-2) 25%, var(--bg-3) 50%, var(--bg-2) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@media (max-width: 600px) {
+  .form-page { padding: 28px 16px 60px; }
+  .form-page__card { padding: 22px; }
+  .form-page__title { font-size: 24px; }
+}
